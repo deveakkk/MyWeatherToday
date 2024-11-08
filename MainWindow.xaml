@@ -1,0 +1,34 @@
+<Window x:Class="MyWeatherToday.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyWeatherToday"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Background="Blue"/>
+        <Border Grid.Column ="1" Background="DarkSlateBlue"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="2" Background="DarkBlue"/>
+        <StackPanel Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
+            <TextBlock Foreground="White" FontSize="45" Text="Today 7°C"/>
+            <TextBlock Foreground="White" FontSize="30" Text="Partially Cloudy"/>
+            <TextBlock Foreground="White" FontSize="30" Text="Precipitation: 3%"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal"
+            HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Foreground="White" FontSize="28" Text="High: 8°" Margin="0,0,20,0"/>
+            <TextBlock Foreground="White" FontSize="28" Text="Low: 4°" Margin="0,0,20,0"/>
+            <TextBlock Foreground="White" FontSize="28" Text="Feels like: 6°"/>
+        </StackPanel>
+        <Image Margin="20" Source="C:\Users\Владислав\Desktop\Погода1.png"/>
+    </Grid>
+</Window>
